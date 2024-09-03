@@ -280,11 +280,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - uses: actions/download-artifact@v3
+    - uses: actions/download-artifact@v4.1.7
       with:
         name: examples1
         path: exbuild
-    - uses: actions/download-artifact@v3
+    - uses: actions/download-artifact@v4.1.7
       with:
         name: examples2
         path: exbuild
@@ -432,7 +432,7 @@ jobs:
       with:
         fetch-depth: 0
     - run: rustup update --no-self-update nightly && rustup default nightly
-    - uses: actions/download-artifact@v3
+    - uses: actions/download-artifact@v4.1.7
       with:
         path: artifacts
     - run: find artifacts
